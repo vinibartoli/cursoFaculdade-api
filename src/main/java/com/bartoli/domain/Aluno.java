@@ -16,6 +16,7 @@ public class Aluno implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
+	private String cpf;
 	private Date datanasc;
 	private String uf;
 	private String cidade;
@@ -47,6 +48,12 @@ public class Aluno implements Serializable{
 	}
 	public String getUf() {
 		return uf;
+	}
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 	public void setUf(String uf) {
 		this.uf = uf;
@@ -108,11 +115,13 @@ public class Aluno implements Serializable{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	public Aluno(Integer id, String nome, Date datanasc, String uf, String cidade, String cep, String logradouro,
-			String numero, String complemento, String bairro, String telefone, String email, Boolean status) {
+	public Aluno(Integer id, String nome, String cpf, Date datanasc, String uf, String cidade, String cep,
+			String logradouro, String numero, String complemento, String bairro, String telefone, String email,
+			Boolean status) {
 		super();
 		this.id = id;
 		this.nome = nome;
+		this.cpf = cpf;
 		this.datanasc = datanasc;
 		this.uf = uf;
 		this.cidade = cidade;
@@ -128,6 +137,7 @@ public class Aluno implements Serializable{
 	public Aluno() {
 		super();
 	}
+	
 	
 	
 }

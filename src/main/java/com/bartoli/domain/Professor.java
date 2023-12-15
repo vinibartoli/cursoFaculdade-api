@@ -16,6 +16,7 @@ public class Professor implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
+	private String cpf;
 	private Date datanasc;
 	private String uf;
 	private String cidade;

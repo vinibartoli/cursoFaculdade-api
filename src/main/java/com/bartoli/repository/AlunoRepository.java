@@ -16,4 +16,6 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
 
 	@Query(value = "SELECT * FROM aluno where id = ?", nativeQuery = true)
 	Aluno getByID(Integer id);
+	
+	Aluno findByCpf(String cpf);
 }
